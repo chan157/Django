@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block body %}
 
 <h1>Article Index</h1>
 
 <a href="{% url 'articles:new' %}">New</a>
+
 <ul>
     {% for article in articles %}
         <li>
@@ -13,6 +16,6 @@
     {% endfor %}
 </ul>
 
-
+<img src="{% static 'bono.jpg' %}" alt="보노보노">
 
 {% endblock %}
